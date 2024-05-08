@@ -9,7 +9,7 @@ const Navigation = () => {
     return <nav>
         <div className="w-10/12 m-auto flex justify-between items-center h-20 ">
             <div className="">
-                <div className="h-6">
+                <div className="cursor-pointer h-6">
                     <img className="w-full h-full" src={logo} alt="Hyggex" />
                 </div>
             </div>
