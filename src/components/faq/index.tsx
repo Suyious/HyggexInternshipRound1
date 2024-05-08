@@ -2,7 +2,7 @@ import BottomIcon from "../../assets/icons/bottom";
 
 const Faq = () => {
     return (
-        <div className="">
+        <div className="w-10/12 m-auto">
             <h1 className="text-3xl font-bold text-blue-900 my-10">FAQ</h1>
             <div className="flex flex-col gap-5">
                 {[ "Can education flashcards be used for all age groups?",

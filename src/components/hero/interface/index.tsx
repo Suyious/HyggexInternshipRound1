@@ -3,14 +3,18 @@ import GoLeft from "../../../assets/icons/goleft";
 import GoRight from "../../../assets/icons/goright";
 import Replay from "../../../assets/icons/replay";
 
-const Interface = () => {
+const Interface = ({ previous, next, number }: { previous?: () => void, next?: () => void, number: string }) => {
     return (
-        <div className="flex items-center px-7 gap-28 w-max m-auto">
+        <div className="flex justify-between items-center px-7 max-w-full w-[30em] m-auto">
             <Replay/>
             <div className="flex items-center gap-8 font-semibold">
-                <GoLeft/>
-                01/10
-                <GoRight/>
+                <button className="cursor-pointer" onClick={previous}>
+                    <GoLeft/>
+                </button>
+                {number.padStart(2, '0')}/10
+                <button className="cursor-pointer" onClick={next}>
+                    <GoRight/>
+                </button>
             </div>
             <FullScreen/>
         </div>
